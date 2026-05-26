@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "Intent",
+    "slug": "intent",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "intent",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.intent.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Intent uses your camera to capture screenshots and items you want to save.",
+        "NSPhotoLibraryUsageDescription": "Intent reads screenshots from your library to extract text and save items.",
+        "NSPhotoLibraryAddUsageDescription": "Intent saves processed images back to your library when you export."
+      }
+    },
+    "android": {
+      "package": "com.intent.app",
+      "edgeToEdgeEnabled": true,
+      "permissions": ["READ_EXTERNAL_STORAGE", "CAMERA", "POST_NOTIFICATIONS"]
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-notifications",
+      ["expo-image-picker", {
+        "photosPermission": "Intent reads screenshots from your library to extract text and save items."
+      }],
+      ["expo-splash-screen", {
+        "backgroundColor": "#0A0A0B"
+      }]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "extra": {
+      "router": { "origin": false },
+      "apiUrl": "http://192.168.1.7:8000",
+    "groq": {
+        "apiKey": "REPLACE_ME",
+        "baseUrl": "https://api.groq.com/openai/v1",
+        "model": "llama-3.1-8b-instant",
+        "visionModel": "meta-llama/llama-4-scout-17b-16e-instruct"
+      },
+      "firebase": {
+        "apiKey": "AIzaSyBjlQh__t19_3gWwRJ6zjtisusfgtcJfaY",
+        "authDomain": "saveshare-165f3.firebaseapp.com",
+        "projectId": "saveshare-165f3",
+        "storageBucket": "saveshare-165f3.firebasestorage.app",
+        "messagingSenderId": "878968436850",
+        "appId": "1:878968436850:web:808b2422f47335ed6aeaeb",
+        "measurementId": "G-XNGQ0C87Y5"
+      }
+    }
+  }
+}
