@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite
+*.sqlite3
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+firebase-service-account*.json
+*-firebase-adminsdk-*.json
+.DS_Store
+.idea/
+.vscode/
